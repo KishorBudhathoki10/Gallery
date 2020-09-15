@@ -1,0 +1,30 @@
+.sectionComponent {
+  background-color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.sectionHeader {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.sectionContent {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .sectionComponent {
+    padding: 6rem;
+  }
+
+  .sectionHeader {
+    font-size: 3rem;
+    margin: 2rem 0;
+  }
+
+  .sectionContent {
+    width: 85%;
+  }
+}

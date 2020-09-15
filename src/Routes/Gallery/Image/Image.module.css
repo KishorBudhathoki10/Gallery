@@ -1,0 +1,60 @@
+.ImageBlock {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.content {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 400ms ease-out;
+  -moz-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+  -ms-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+  text-align: center;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+}
+
+.ImageBlock .content:hover {
+  opacity: 1;
+}
+
+.ImageBlock .content .text {
+  opacity: 1;
+  height: 0;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+}
+
+.text h2 {
+  letter-spacing: 0.5rem;
+  font-weight: 200;
+}
+
+.photoBy {
+  color: rgb(187, 184, 184);
+  font-size: 1rem;
+}
+
+.photographer {
+  letter-spacing: 1rem;
+  font-size: 2rem;
+  color: rgb(187, 184, 184);
+}
+
+@media (min-width: 600px) {
+  .photoBy {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .photographer {
+    font-size: 3rem;
+  }
+}

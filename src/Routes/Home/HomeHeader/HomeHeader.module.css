@@ -1,0 +1,28 @@
+.mainHeader {
+  color: white;
+  letter-spacing: 4px;
+  font-weight: 200;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #282e34;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 300px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .mainHeader {
+    color: white;
+    letter-spacing: 7px;
+    font-weight: 200;
+    font-size: 3.5rem;
+    padding: 2rem;
+    background-color: #282e34;
+    display: inline-block;
+    min-width: 680px;
+  }
+}

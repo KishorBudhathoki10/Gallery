@@ -1,0 +1,50 @@
+.navigation {
+  font-size: 2rem;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  transition: top 0.6s;
+}
+
+.navigation a {
+  text-decoration: none;
+  margin: 3%;
+  padding-bottom: 4px;
+}
+
+.navigation_hidden {
+  top: -50px;
+}
+
+.Home,
+.Gallery {
+  padding: 1rem;
+}
+
+.Home {
+  background-color: #282e34;
+}
+
+.Home a {
+  color: white;
+}
+
+.Home a:hover,
+.Home a:active {
+  color: grey;
+}
+
+/* .Gallery {
+  
+} */
+
+.Gallery a {
+  color: black;
+}
+
+.Gallery a:hover,
+.Gallery a:active {
+  color: grey;
+}
