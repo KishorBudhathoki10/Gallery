@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import classes from "./Navigation.module.css";
 import useCurrentWindowWidth from "../../customHooks/useCurrentWindowWidth";
@@ -47,14 +47,10 @@ const Navigation = (props) => {
 
   let style = {};
 
-  let styleHome, styleGallery;
+  const styleActiveNavLink = { color: "grey" };
 
   if (location.pathname === "/") {
     if (!visible) classCollection += ` ${classes.navigation_hidden}`;
-    styleHome = { color: "grey" };
-  } else if (location.pathname === "/gallery") {
-    styleGallery = { color: "grey" };
-    style = { position: "static" };
   } else {
     style = { position: "static" };
   }
@@ -63,13 +59,13 @@ const Navigation = (props) => {
     if (width > 600) {
       return (
         <div ref={ref}>
-          <Link to="/" style={styleHome}>
+          <NavLink to="/" exact activeStyle={styleActiveNavLink}>
             Home
-          </Link>
+          </NavLink>
 
-          <Link to="/gallery" style={styleGallery}>
+          <NavLink to="/gallery" activeStyle={styleActiveNavLink}>
             Gallery
-          </Link>
+          </NavLink>
 
           <a
             target="_blank"
