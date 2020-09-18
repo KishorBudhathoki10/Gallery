@@ -74,7 +74,7 @@ const MobileNavigation = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="http://localhost:3001"
+            href="https://shophelenasphotogallery.netlify.app/"
             onClick={() => setNavClicked(false)}
           >
             Shop

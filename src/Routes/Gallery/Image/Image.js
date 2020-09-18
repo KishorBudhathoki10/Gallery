@@ -9,22 +9,24 @@ const Image = (props) => {
   const [imageHeight, setImageHeight] = useState(0);
   const [hoverContent, setHoverContent] = useState(false);
 
-  const imageRef = useRef();
+  const ref = useRef();
 
   useEffect(() => {
+    console.log(ref.current);
+
     const settingSpans = () => {
-      const height = imageRef.current.clientHeight;
+      if (ref.current) {
+        const height = ref.current.clientHeight;
 
-      setImageHeight(height);
+        setImageHeight(height);
 
-      const newSpans = Math.ceil(height / 10);
+        const newSpans = Math.ceil(height / 10);
 
-      setSpans(newSpans);
+        setSpans(newSpans);
+      }
     };
 
-    imageRef.current.addEventListener("load", settingSpans);
-
-    return () => {};
+    ref.current.addEventListener("load", settingSpans);
   }, []);
 
   // For text sliding in image
@@ -41,12 +43,7 @@ const Image = (props) => {
 
   return (
     <div className={classes.ImageBlock} style={{ gridRowEnd: `span ${spans}` }}>
-      <img
-        ref={imageRef}
-        src={imageUrl}
-        alt={title}
-        className={classes.Image}
-      />
+      <img ref={ref} src={imageUrl} alt={title} className={classes.Image} />
       <div
         onMouseOver={() => setHoverContent(true)}
         onMouseLeave={() => setHoverContent(false)}
