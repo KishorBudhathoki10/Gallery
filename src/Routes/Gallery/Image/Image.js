@@ -12,8 +12,6 @@ const Image = (props) => {
   const ref = useRef();
 
   useEffect(() => {
-    console.log(ref.current);
-
     const settingSpans = () => {
       if (ref.current) {
         const height = ref.current.clientHeight;
