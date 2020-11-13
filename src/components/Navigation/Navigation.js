@@ -70,7 +70,7 @@ const Navigation = (props) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://shophelenasphotogallery.netlify.app/"
+            href="https://shopbcngallery.netlify.app/"
           >
             Shop
           </a>

@@ -66,7 +66,7 @@ const Home = (props) => {
       </SectionComponent>
 
       <ImageComponent imageUrl={"./images/swing.jpeg"} opacity="1">
-        <h1 className={classes.mainHeader}>Helena's Photo Gallery</h1>
+        {/* <h1 className={classes.mainHeader}>Helena's Photo Gallery</h1> */}
       </ImageComponent>
     </div>
   );

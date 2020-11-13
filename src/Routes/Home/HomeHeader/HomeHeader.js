@@ -9,7 +9,7 @@ const Header = (props) => {
     <div>
       <ImageComponent imageUrl={"./images/women.jpeg"} opacity="1">
         <div style={{ height: "500px" }}></div>
-        <h1 className={classes.mainHeader}>Helena's Photo Gallery</h1>
+        <h1 className={classes.mainHeader}>BCN GALLERY</h1>
       </ImageComponent>
     </div>
   );

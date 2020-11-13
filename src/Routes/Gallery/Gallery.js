@@ -1,30 +1,14 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 
 import Image from "./Image/Image";
 import classes from "./Gallery.module.css";
 import ImageView from "./ImageView/ImageView";
 
-const Gallery = () => {
-  const [images, setImages] = useState([]);
+const Gallery = ({ images }) => {
   const [imageClicked, setImageClicked] = useState(false);
 
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [selectedImage, setSelecetedImage] = useState({});
-
-  useEffect(() => {
-    const getImages = async () => {
-      const response = await axios.get(process.env.REACT_APP_GALLERY_API, {
-        params: {
-          fields: "title,photoBy,imageUrl",
-        },
-      });
-
-      setImages(response.data.data.images);
-    };
-
-    getImages();
-  }, []);
 
   useEffect(() => {
     setSelecetedImage(images[selectedImageIndex]);

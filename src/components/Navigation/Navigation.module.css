@@ -15,20 +15,21 @@
 }
 
 .navigation_hidden {
-  top: -50px;
+  top: -80px;
 }
 
 .Home,
 .Gallery {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .Home {
-  background-color: #282e34;
+  background-color: #aaa9a4;
 }
 
 .Home a {
-  color: white;
+  color: #3c4140;
+  font-weight: 600;
 }
 
 .Home a:hover,
